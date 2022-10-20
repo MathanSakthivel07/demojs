@@ -1,5 +1,27 @@
 function MyFunc2(a) {
-  console.log(123);
+  if (a) {
+    if (a) {
+      if (a) {
+        if (a) {
+          if (a) {
+            if (a) {
+              if (a) {
+                if (a) {
+                  if (a) {
+                    if (a) {
+                      if (a) {
+                        console.log(a);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 MyFunc2(1);
