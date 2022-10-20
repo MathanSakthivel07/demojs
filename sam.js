@@ -25,4 +25,4 @@ function MyFunc2(a) {
 
 }
 
-MyFunc2();
+MyFunc2(1);
