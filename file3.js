@@ -1,12 +1,25 @@
-const express = require('express');
-const db = require('./db');
+(function () {
+    'use strict';
 
-const router = express.Router();
+    angular
+        .module('app.clickjacking')
+        .controller('ClickjackingController', ClickjackingController);
 
-router.get('/email', (req, res) => {
-  db.query('SELECT email FROM users WHERE id = ' + req.query.id);
-    .then((record) => {
-      // logical flow
-      res.send(record[0]);
-    })
-});
+    ClickjackingController.$inject = ['$q', 'userservice', 'logger'];
+    /* @ngInject */
+    function ClickjackingController($q, userservice, logger) {
+        var vm = this;
+        vm.title = 'Clickjacking';
+        vm.deleteProfile = deleteProfile;
+
+        activate();
+
+        function activate() {
+            logger.info('Activated Clickjacking View');
+        }
+
+        function deleteProfile() {
+            logger.info('The profile was successfully deleted!');
+        }
+    }
+})();
