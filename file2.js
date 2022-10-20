@@ -1,28 +1,12 @@
-function MyFunc2(a) {
-  if (a) {
-    if (a) {
-      if (a) {
-        if (a) {
-          if (a) {
-            if (a) {
-              if (a) {
-                if (a) {
-                  if (a) {
-                    if (a) {
-                      if (a) {
-                        console.log(a);
-//                         console.log(a);
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+function sum(num1, num2){
+  return num1 + num2;
 }
 
-MyFunc2(1);
+sum(10,7);
+
+
+function multiply(num1, num2){
+  return num1 * num2;
+}
+
+multiply(10,7);
