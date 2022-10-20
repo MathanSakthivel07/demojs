@@ -1,11 +1,12 @@
-window.onload = function() 
-{	var btn = document.getElementById('btn'); 
-	btn.addEventListener('click', b, false); 
-	btn.addEventListener('click', c, false); 
-} 
-function b() 
-{	/* some code here */ 
-} 
-function c() 
-{	/* some other code here */ 
-} 
+const express = require('express');
+const db = require('./db');
+
+const router = express.Router();
+
+router.get('/email', (req, res) => {
+  db.query('SELECT email FROM users WHERE id = ' + req.query.id);
+    .then((record) => {
+      // logical flow
+      res.send(record[0]);
+    })
+});
